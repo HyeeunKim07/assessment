@@ -1,0 +1,22 @@
+import random
+
+def random_sample_without_duplicates(input_list, num_samples):
+    # 중복 제거
+    unique_items = set(input_list)
+    
+    # 리스트 변환
+    unique_list = list(unique_items)
+    
+    # num_samples 개의 요소 추출
+    if num_samples > len(unique_list):
+        raise ValueError("The number of samples requested exceeds the number of unique items in the list.")
+    random_samples = random.sample(unique_list, num_samples)
+    
+    return random_samples
+
+# 예시 리스트
+my_list = list(range(1, 49))
+
+# 5개의 중복되지 않는 랜덤 요소 추출
+random_samples = random_sample_without_duplicates(my_list, 5)
+print(random_samples)
