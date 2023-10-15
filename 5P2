@@ -1,0 +1,16 @@
+import random
+
+def random_sample_from_list(input_list, num_samples):
+    # 랜덤으로 num_samples 개의 요소를 추출합니다.
+    if num_samples > len(input_list):
+        raise ValueError("The number of samples requested exceeds the number of items in the list.")
+    random_samples = random.sample(input_list, num_samples)
+    
+    return random_samples
+
+# 1부터 5까지의 숫자 리스트
+my_list = [1, 2, 3, 4, 5]
+
+# 2개의 랜덤 요소 추출
+random_samples = random_sample_from_list(my_list, 2)
+print(random_samples)
