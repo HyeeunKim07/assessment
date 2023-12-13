@@ -1,0 +1,11 @@
+import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.rcParams['font.family'] = 'Malgun Gothic'
+matplotlib.rcParams['font.size'] = 10
+matplotlib.rcParams['axes.unicode_minus'] = False
+
+labels = ['2013', '2017']
+values = [29.7, 39.8]
+
+plt.bar(labels, values)
+plt.ylim(20, 50)
